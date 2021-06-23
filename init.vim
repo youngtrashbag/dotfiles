@@ -24,5 +24,5 @@ call plug#end()
 let g:airline_theme='solarized_flood'
 
 " keybinding to NERDTree
-nmap <F6> :NERDTreeToggle<CR>
+nmap <F1> :NERDTreeToggle<CR>
 
