@@ -1,6 +1,15 @@
 " NeoVim configuration
 
 set number
+syntax enable
+set hidden
+set nowrap
+set encoding=utf-8
+set ruler
+" tabbing options
+set tabstop=4
+set softtabstop=-1
+set shiftwidth=4
 
 " Vim Plug Setup
 call plug#begin(stdpath('data') . '/plugged')
