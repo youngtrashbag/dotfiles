@@ -3,6 +3,8 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/elias/.oh-my-zsh"
+# on OSX
+#export ZSH="/Users/elias/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,4 +116,7 @@ source $ZSH/oh-my-zsh.sh
 alias lsa="ls -A"
 alias lss="ls -lh"
 alias lssa="ls -lhA"
+
+# set editor (nvim should be in path)
+export EDITOR="nvim"
 
