@@ -35,6 +35,12 @@ Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 " helps with parenthesis, brackets, quotes, etc
 Plug 'tpope/vim-surround'
+" autocompletion
+Plug 'davidhalter/jedi-vim'
+" snippet thing (gif on website looks amazing)
+Plug 'sirver/ultisnips'
+" syntax and style checker for python
+Plug 'nvie/vim-flake8'
 
 call plug#end()
 
