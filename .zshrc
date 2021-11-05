@@ -120,3 +120,6 @@ alias lssa="ls -lhA"
 # set editor (nvim should be in path)
 export EDITOR="nvim"
 
+# add bin dir for programs in /opt
+PATH="$PATH:/opt/bin/"
+
