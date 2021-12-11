@@ -123,3 +123,6 @@ export EDITOR="nvim"
 # add bin dir for programs in /opt
 PATH="$PATH:/opt/bin/"
 
+# add local binaries into path
+PATH="$PATH:/home/elias/.local/bin"
+
