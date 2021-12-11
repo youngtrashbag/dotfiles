@@ -11,8 +11,13 @@ Z Shell configuration
 
 ## `init.vim`
 
+requires [Vim Plug](https://github.com/junegunn/vim-plug)
+```shell
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
 stored in `~/.config/nvim/`
 
-NeoVim configuration  
-[Vim Plug](https://github.com/junegunn/vim-plug) installed
+NeoVim configuration
 
