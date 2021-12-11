@@ -4,12 +4,10 @@ set number
 syntax enable
 set hidden
 set nowrap
-set encoding=utf-8
+set encoding=UTF-8
 set ruler
-" tabbing options
-set tabstop=4
-set softtabstop=-1
-set shiftwidth=4
+" tab translates to 4 space characters
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Vim Plug Setup
 "	please download the vim-plug tool first:
