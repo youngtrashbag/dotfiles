@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "DejaVu Sans Mono:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -118,10 +118,14 @@ static const char *colorname[] = {
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
+	"#cccccc", /* 256 */
 	"#555555",
         "#fafafa",
-        "#4444aa",
+        "#4444aa", /* smooth blue */
+        "#3f3f5f", /* 260 dark solar blue */
+        "#5f3f3f", /* dark solar red */
+        "#cacafa", /* light solar blue */
+        "#facaca", /* light solar red */
 };
 
 
@@ -129,8 +133,8 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
+unsigned int defaultfg = 263;
+unsigned int defaultbg = 260;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 

@@ -36,4 +36,5 @@ fi
 
 setxkbmap -layout ch
 
+slstatus &
 exec dwm
