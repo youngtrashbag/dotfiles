@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-
 /* interval between updates (in ms) */
 const unsigned int interval = 1000;
 
@@ -65,12 +64,11 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ wifi_perc, "%s",          NULL },
-	{ cpu_perc, "%s",           NULL },
-	{ ram_perc, "%s",           NULL },
-	{ vol_perc, "%s",           NULL },
-	{ wifi_perc, "%s",          NULL },
-	{ battery_perc, "%s",       "BAT0" },
-	{ uptime, "%s",             NULL },
+	{ wifi_perc, "%s ",          "wlp0s20f3" },
+	{ cpu_perc, "%s ",           NULL },
+	{ ram_perc, "%s ",           NULL },
+	/* { vol_perc, "%s",           NULL }, */
+	{ battery_perc, "%s ",       "BAT0" },
+	{ uptime, "%s ",             NULL },
 	{ datetime, "%s",           "%F %T" },
 };
