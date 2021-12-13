@@ -59,6 +59,17 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 
+/* import X11 keysym (file found in /usr/include/X11/XF86keysym.h)*/
+#include <X11/XF86keysym.h>
+#define BrightnessUp XF86XK_MonBrightnessUp
+#define BrightnessDown XF86XK_MonBrightnessDown
+
+/* brightness commands */
+static const char *brightness[][4] = {
+    { "xbacklight", "-inc", "5", NULL },
+    { "xbacklight", "-dec", "5", NULL },
+};
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -94,6 +105,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+        { 0,                            BrightnessUp, spawn,       {.v=brightness[0]} },
+        { 0,                            BrightnessDown, spawn,     {.v=brightness[1]} },
 };
 
 /* button definitions */
