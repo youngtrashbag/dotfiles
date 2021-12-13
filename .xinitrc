@@ -36,5 +36,9 @@ fi
 
 setxkbmap -layout ch
 
+# should prevent PyCharm from bugging out
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+
 slstatus &
 exec dwm

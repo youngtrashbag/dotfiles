@@ -61,13 +61,25 @@ static const char *termcmd[]  = { "alacritty", NULL };
 
 /* import X11 keysym (file found in /usr/include/X11/XF86keysym.h)*/
 #include <X11/XF86keysym.h>
+
+/* brightness commands */
 #define BrightnessUp XF86XK_MonBrightnessUp
 #define BrightnessDown XF86XK_MonBrightnessDown
 
-/* brightness commands */
 static const char *brightness[][4] = {
     { "xbacklight", "-inc", "5", NULL },
     { "xbacklight", "-dec", "5", NULL },
+};
+
+/* volume commands */
+# define VolUp XF86XK_AudioRaiseVolume
+# define VolDown XF86XK_AudioLowerVolume
+# define VolMute XF86XK_AudioMute
+
+static const char *volume[][8] = {
+    { "amixer", "-D", "sysdefault", "sset", "Master", "5%+", NULL },
+    { "amixer", "-D", "sysdefault", "sset", "Master", "5%-", NULL },
+    { "amixer", "-D", "sysdefault", "set", "Master", "1+", "toggle", NULL }, // toggle mute
 };
 
 static Key keys[] = {
@@ -107,6 +119,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
         { 0,                            BrightnessUp, spawn,       {.v=brightness[0]} },
         { 0,                            BrightnessDown, spawn,     {.v=brightness[1]} },
+        { 0,                            VolUp,     spawn,          {.v=volume[0]} },
+        { 0,                            VolDown,   spawn,          {.v=volume[1]} },
+        { 0,                            VolMute,   spawn,          {.v=volume[2]} },
 };
 
 /* button definitions */
