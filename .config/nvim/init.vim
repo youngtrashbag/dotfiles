@@ -1,6 +1,5 @@
 " NeoVim configuration
 
-set number
 syntax enable
 set hidden
 set nowrap
@@ -8,6 +7,15 @@ set encoding=UTF-8
 set ruler
 " tab translates to 4 space characters
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+" set cool hybrid line numbers relative and absolute
+set number
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
 
 " Vim Plug Setup
 "	please download the vim-plug tool first:
