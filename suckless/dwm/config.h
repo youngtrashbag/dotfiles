@@ -77,9 +77,9 @@ static const char *brightness[][4] = {
 # define VolMute XF86XK_AudioMute
 
 static const char *volume[][8] = {
-    { "amixer", "-D", "sysdefault", "sset", "Master", "5%+", NULL },
-    { "amixer", "-D", "sysdefault", "sset", "Master", "5%-", NULL },
-    { "amixer", "-D", "sysdefault", "set", "Master", "1+", "toggle", NULL }, // toggle mute
+    { "amixer", "-D", "sysdefault", "sset", "Master", "5+", NULL },
+    { "amixer", "-D", "sysdefault", "sset", "Master", "5-", NULL },
+    { "amixer", "-D", "sysdefault", "set", "Master", "toggle", NULL }, // toggle mute
 };
 
 static Key keys[] = {

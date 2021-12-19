@@ -3,4 +3,7 @@
 .config/qBittorrent
 .config/dconf/user
 .config/JetBrains
+.config/spotifyd
+.config/QtProject.conf
+.config/libreoffice
 
