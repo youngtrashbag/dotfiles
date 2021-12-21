@@ -1,9 +1,6 @@
-# config files
-.config/pulse
-.config/qBittorrent
-.config/dconf/user
-.config/JetBrains
-.config/spotifyd
-.config/QtProject.conf
-.config/libreoffice
-
+# ignore .config by default
+.config/
+# not nvim
+!.config/nvim
+# not picom (compositor)
+!.config/picom.conf

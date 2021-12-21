@@ -34,5 +34,9 @@ fi
 
 setxkbmap -layout ch
 
+feh --bg-center ~/.dotfiles/background/bg1.jpg --image-bg "#3a3a60"
+
+picom &
 slstatus &
-exec dwm
+exec i3
+

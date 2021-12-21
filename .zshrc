@@ -117,6 +117,9 @@ alias lsa="ls -A"
 alias lss="ls -lh"
 alias lssa="ls -lhA"
 
+# grep with color
+alias grep="grep --color"
+
 # set editor (nvim should be in path)
 export EDITOR="nvim"
 
