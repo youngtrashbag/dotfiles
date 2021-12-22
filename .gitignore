@@ -4,3 +4,7 @@
 !.config/nvim
 # not picom (compositor)
 !.config/picom.conf
+# not i3
+!.config/i3
+# not rofi
+!.config/rofi
