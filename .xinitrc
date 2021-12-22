@@ -38,5 +38,5 @@ feh --bg-center ~/.dotfiles/background/bg1.jpg --image-bg "#3a3a60"
 
 picom &
 slstatus &
-exec i3
+exec dwm
 
