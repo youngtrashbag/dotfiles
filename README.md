@@ -8,6 +8,9 @@ stored in `~`
 
 Z Shell configuration  
 [oh my zsh](https://ohmyz.sh/) installed
+```shell
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 ## `init.vim` NeoVim configuration
 
